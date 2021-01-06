@@ -11,16 +11,14 @@ class PagesController{
         $users = App::get('database')->selectAll('users');
 
         return view('home', compact('users'));
-
     }
 
 
     public function administrator()
     {
-        
+        $users = App::get('database')->selectAll('users');   
 
-        return view('administrator');
-        
+        return view('administrator', compact('users'));
     }
 
 

@@ -4,12 +4,12 @@ namespace App\Controllers;
 
 use App\Core\App;
 
-class UsersController{
+class UserController{
     public function index()
     {
         $users = App::get('database')->selectAll('users');
 
-        return view('users', compact('users'));
+        return view('home', compact('users'));
     }
 
 

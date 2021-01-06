@@ -7,9 +7,7 @@ use App\Core\App;
 class UsersController{
     public function index()
     {
-        // $users = App::get('database')->selectAll('users');
-
-        $users = App::get('database')->selectAll('users', 'User');
+        $users = App::get('database')->selectAll('users');
 
         return view('users', compact('users'));
     }

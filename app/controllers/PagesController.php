@@ -17,7 +17,7 @@ class PagesController{
     {
         
 
-        return view('about');
+        return view('administrator');
         
     }
 

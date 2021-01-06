@@ -1,6 +1,6 @@
-
-
 <?php require 'partials/cmsnav.php' ?>
+
+
 <p> Zie hier de data uit de DB: </p>
 <ul>
     <?php foreach ($users as $user) : ?>

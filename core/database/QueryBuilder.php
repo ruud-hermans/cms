@@ -13,16 +13,13 @@ class QueryBuilder {
 
     }
 
-    public function selectAll($table, $intoClass)
+    public function selectAll($table)
     {
         $statement = $this->pdo->prepare("select * from {$table}");
 
         $statement->execute();
 
-        return $users = $statement->fetchAll(PDO::FETCH_CLASS, $intoClass);
-
-        // return $users = $statement->fetchAll(PDO::FETCH_OBJ);
-   
+        return $users = $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
 }

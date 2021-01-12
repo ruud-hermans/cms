@@ -8,6 +8,3 @@ use App\Core\{Router, Request};
 
 Router::load('app/routes.php')
     ->direct(Request::url(), Request::method());
-
- 
-

@@ -22,6 +22,38 @@ class QueryBuilder {
         return $users = $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+
+    public function insert($table, $parameters)
+    {
+        $sql = sprintf(
+            'insert into %s (%s) values (%s)',
+            $table,
+            implode(', ', array_keys($parameters)),
+            ':' . implode(', :', array_keys($parameters))
+        );
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+            
+            $statement->execute($parameters);
+            
+        } catch (\Exception $e) {
+            
+        }
+    }
+
+    public function updateUserEmail($parameters)
+    {   
+        $username = $parameters['username'];
+        $useremail = $parameters['useremail'];
+
+        try {
+            $statement = $this->pdo->prepare('update users set useremail = ? where username = ?');
+            
+            $statement->execute([$useremail, $username]);
+            
+        } catch (\Exception $e) {
+            
+        }
+    }
 }
-
-

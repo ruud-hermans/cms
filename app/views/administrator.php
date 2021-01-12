@@ -1,14 +1,43 @@
-<?php require 'partials/cmsnav.php' ?>
+<?php require 'partials/head.php' ?>
 
 
-<p> Zie hier de data uit de DB: </p>
-<ul>
+<p> User overview </p>
+
+
+<table>
+    <tr>
+        <th>Username</th>
+        <th>E-mail</th>
+        <th>Artist</th>
+    </tr>
     <?php foreach ($users as $user) : ?>
-        <li>
+    <tr>
+        <td><?php echo $user->username?></td>
+        <td><?php echo $user->useremail?></td>
+        <td>
             <?php if($user->isArtist):?>
-                <p>Artist: &#10003<p>
+                <p>&#10003<p>
             <?php else: ?>
-                <p>Artist: &#10007<p>
+                <p>&#10007<p>
             <?php endif; ?>
+        </td>
+    </tr>
     <?php endforeach; ?>
-</ul>
+</table>
+
+
+<h1> Update email </h1>
+
+<form method="POST" action="/updateUserEmail">
+    <input name="username" id="username" placeholder="Chose your username">
+    <input name="useremail" id="useremail" placeholder="Your e-mail">
+
+
+    <button type="submit">Submit</button>
+</form>
+
+
+
+
+
+<!-- <button type="submit">Delete user</button> -->

@@ -1,3 +1,3 @@
-<?php
+<?php require 'partials/head.php' ?>
 
-//pagina voor wanneer user registreert
+<p> Thank you for registering, <?php echo $user->username ?>! <p>

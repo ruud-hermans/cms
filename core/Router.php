@@ -42,7 +42,7 @@ class Router
             ...explode('@', $this->routes[$requestType][$url]));
         }
 
-        throw new Exception('No defined route found');
+        throw new \Exception('No defined route found');
     }
 
 
@@ -54,8 +54,8 @@ class Router
         $controller = new $controller;
 
         if(! method_exists($controller, $action)){
-            throw new Exception(
-                "{$controller} does not contain."
+            throw new \Exception(
+                "{$controller} does not contain {$action}."
             );
         }
 

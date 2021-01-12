@@ -1,10 +1,13 @@
 <?php require 'partials/head.php' ?>
 
-<h1> Login </h1>
+<script src="js/partials/login.js"></script>
 
-<form method="GET" action="/userpage">
+<h1> Login </h1>
+<form method="GET" action="/login">
     <input name="username" id="username" placeholder="Your username">
+    <input name="useremail" id="useremail" placeholder="Your e-mail">
     <input name="password" id="password" placeholder="Your password">
+    <input type="checkbox" onclick="hidePassword()">Show Password 
 
     <button type="submit">Submit</button>
 </form>
@@ -12,27 +15,16 @@
 
 <h1> Register </h1>
 
-<form method="GET" action="/register">
+<form method="POST" action="/register">
     <input name="username" id="username" placeholder="Chose your username">
-    <input name="password" id="password" placeholder="Chose your password">
-    <input name="password" id="password" placeholder="Verify your password">
+    <input name="useremail" id="useremail" placeholder="Your e-mail">
+    <!-- <input name="password" id="password" placeholder="Your password"> -->
+    <!-- <input name="username" id="username" placeholder="Are you an artist?"> -->
+
+    <!-- <input name="password" id="password" placeholder="Chose your password">
+    <input name="password" id="password" placeholder="Verify your password"> -->
 
     <button type="submit">Submit</button>
 </form>
-
-<p> Zie hier de data uit de DB: </p>
-<ul>
-    <?php foreach ($users as $user) : ?>
-        <li>
-            <?php if($user->isArtist):?>
-                <p>Artist: &#10003<p>
-            <?php else: ?>
-                <p>Artist: &#10007<p>
-            <?php endif; ?>
-    <?php endforeach; ?>
-</ul>
-
-
-
 
 <?php require 'partials/footer.php' ?>

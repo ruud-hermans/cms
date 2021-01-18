@@ -56,4 +56,27 @@ class QueryBuilder {
             
         }
     }
+
+    public function userCheck($query){
+    try {
+
+        $username = $_REQUEST['username'];
+               
+
+        $statement = $this->pdo->prepare("select * from users where username = ?");
+
+        
+
+        $statement->execute([$username]);
+
+
+    } catch (\Exception $e) {
+        var_dump($e->getMessage());
+    }
+
+    // return $stmt;
+    }
+
+
+
 }

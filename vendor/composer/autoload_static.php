@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit461dc6a82df6ea5338815aa50342e8cb
 {
     public static $classMap = array (
+        'App\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/controllers/LoginController.php',
         'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
         'App\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/controllers/UserController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/app.php',
@@ -15,6 +16,7 @@ class ComposerStaticInit461dc6a82df6ea5338815aa50342e8cb
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'App\\Core\\User' => __DIR__ . '/../..' . '/core/classes.php',
+        'App\\Models\\User' => __DIR__ . '/../..' . '/app/models/UserModel.php',
         'ComposerAutoloaderInit461dc6a82df6ea5338815aa50342e8cb' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit461dc6a82df6ea5338815aa50342e8cb' => __DIR__ . '/..' . '/composer/autoload_static.php',

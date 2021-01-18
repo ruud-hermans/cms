@@ -1,15 +1,16 @@
 <?php require 'partials/head.php' ?>
 
-<script src="js/partials/login.js"></script>
+<script src="public/js/login.js"></script>
 
 <h1> Login </h1>
-<form method="GET" action="/login">
+
+<form method="POST" action="/login">
     <input name="username" id="username" placeholder="Your username">
-    <input name="useremail" id="useremail" placeholder="Your e-mail">
+    <!-- <input name="useremail" id="useremail" placeholder="Your e-mail"> -->
     <input name="password" id="password" placeholder="Your password">
     <input type="checkbox" onclick="hidePassword()">Show Password 
 
-    <button type="submit">Submit</button>
+    <button type="submit" >Submit</button>
 </form>
 
 

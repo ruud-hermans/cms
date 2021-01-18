@@ -1,4 +1,17 @@
 <?php require 'partials/head.php' ?>
 
+<div>
+    <h1 id="profileheader"> Userpage </h1>
+</div>
 
-<p>Coming soon.... (or is it?)</p>
+<div>
+    <p>
+        Name:
+        <br>
+        E-mail:
+        <br>
+        <button>Change Password</button>
+    </p>
+</div>
+
+
